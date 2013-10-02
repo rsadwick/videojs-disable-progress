@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head><title>Disable UI Plugin Example</title></head>
+<style>
+.example-description {
+  background-color: #ddd;
+  border: thin solid #333;
+  padding: 5px;
+}
+</style>
+<link rel="stylesheet" href="libs/video-js-4.1.0/video-js.css">
+<script src="libs/video-js-4.1.0/video.dev.js"></script>
+<body>
+<p class="example-description">
+  You can see a player configured with the Disable UI plugin below. Check out
+  the page source to see an example of how to configure the plugin yourself.
+</p>
+<video class="video-js vjs-default-skin" src="http://vjs.zencdn.net/v/oceans.mp4" data-setup="{}" controls></video>
+
+<script src="src/videojs.disableUi.js"></script>
+<!-- 
+  video.js will automatically initialize the video element since it's loaded in
+  the head of the document but you still need to configure and initialize the
+  plugin.
+-->
+<script>
+var
+
+  // save a reference to the video element
+  video = document.querySelector('video'),
+
+  // save a reference to the video.js player for that element
+  player = videojs(video);
+
+  // initialize the plugin, passing in autoDisable
+  player.disableUi({
+    autoDisable: true
+  });
+</script>
+</body>
+</html>
