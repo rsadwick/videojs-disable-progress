@@ -53,8 +53,9 @@ videojs('video', {}, function() {
 ```
 
 
-## Documentation
-_(Coming soon)_
+## Example
+
+[jsfiddle example](http://jsfiddle.net/rsadwick/Qmeat/)
 
 ## Examples
 Check out example.html to see Disable Progress in action.
