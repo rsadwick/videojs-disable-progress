@@ -1,5 +1,5 @@
 /*
- * disableUi
+ * disableProgress
  * https://github.com/SadwickR/videojs-disable-ui
  *
  * Copyright (c) 2013 Ryan Sadwick
@@ -31,7 +31,7 @@
     },
 
     // plugin initializer
-    disableUi = function(options) {
+    disableProgress = function(options) {
       var
         // save a reference to the player instance
         player = this,
@@ -40,7 +40,7 @@
         settings = extend({}, defaults, options || {});
 
       // disable / enable methods
-      player.disableUi = {
+      player.disableProgress = {
         disable: function() {
 
             player.controlBar.progressControl.seekBar.off("mousedown");
@@ -56,11 +56,11 @@
 
       if(settings.autoDisable)
       {
-        player.disableUi.disable();
+        player.disableProgress.disable();
       }
     };
 
   // register the plugin with video.js
-  vjs.plugin('disableUi', disableUi);
+  vjs.plugin('disableProgress', disableProgress);
 
 }(window.videojs));

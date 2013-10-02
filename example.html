@@ -17,7 +17,7 @@
 </p>
 <video class="video-js vjs-default-skin" src="http://vjs.zencdn.net/v/oceans.mp4" data-setup="{}" controls></video>
 
-<script src="src/videojs.disableUi.js"></script>
+<script src="src/videojs.disableProgress.js"></script>
 <!-- 
   video.js will automatically initialize the video element since it's loaded in
   the head of the document but you still need to configure and initialize the
@@ -33,8 +33,8 @@ var
   player = videojs(video);
 
   // initialize the plugin, passing in autoDisable
-  player.disableUi({
-    autoDisable: true
+  player.disableProgress({
+    autoDisable: false
   });
 </script>
 </body>
