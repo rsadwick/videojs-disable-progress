@@ -61,6 +61,6 @@ videojs('video', {}, function() {
 Check out example.html to see Disable Progress in action.
 
 ## Release History
-12/30/2013
-Added getState method that returns whether the progress is disabled or not
-Added better tests
+#####12/30/2013
+* Added getState method that returns whether the progress is disabled or not
+* Added better tests
