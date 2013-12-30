@@ -22,7 +22,7 @@
 
   var isHtmlSupported;
 
-  module('videojs.disableUi', {
+  module('videojs.disableProgress', {
     // This will run before each test in this module.
     setup: function() {
       // grab a reference to the video
@@ -51,9 +51,34 @@
     }
   });
 
-  test('is registered', function() {
-    expect(1);
-    ok(this.player.disableUi, 'the disableUi plugin is present');
-  });
+    test('is registered', function() {
+        expect(1);
+        ok(this.player.disableProgress, 'the disableProgress plugin is present');
+    });
+
+    test('plugin api methods exist', function() {
+        expect(2);
+        this.player.disableProgress();
+        ok(this.player.disableProgress.disable, 'disable exists');
+        ok(this.player.disableProgress.enable, 'enable exists');
+    });
+
+    test('autoDisable option can be overridden to true', function() {
+        expect(1);
+        this.player.disableProgress({
+          autoDisable: true
+        });
+
+        strictEqual(this.player.disableProgress.getState(), true, 'returns true');
+    });
+
+    test('autoDisable option can be overridden to false', function() {
+        expect(1);
+        this.player.disableProgress({
+          autoDisable: false
+        });
+
+        strictEqual(this.player.disableProgress.getState(), false, 'returns false');
+    });
 
 }(window.videojs));

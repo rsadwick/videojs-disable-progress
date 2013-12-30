@@ -35,6 +35,7 @@
       var
         // save a reference to the player instance
         player = this,
+        state = false,
 
         // merge options and defaults
         settings = extend({}, defaults, options || {});
@@ -42,15 +43,19 @@
       // disable / enable methods
       player.disableProgress = {
         disable: function() {
-
+            state = true;
             player.controlBar.progressControl.seekBar.off("mousedown");
             player.controlBar.progressControl.seekBar.off("touchstart");
             player.controlBar.progressControl.seekBar.off("click");
         },
         enable: function() {
+            state = false;
             player.controlBar.progressControl.seekBar.on("mousedown",  player.controlBar.progressControl.seekBar.onMouseDown);
             player.controlBar.progressControl.seekBar.on("touchstart", player.controlBar.progressControl.seekBar.onMouseDown);
             player.controlBar.progressControl.seekBar.on("click", player.controlBar.progressControl.seekBar.onClick);
+        },
+        getState: function(){
+          return state;
         }
       };
 
