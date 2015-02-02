@@ -1,0 +1,30 @@
+{
+  "name": "videojs-disable-progress",
+  "version": "0.1.0",
+  "homepage": "https://github.com/rsadwick/videojs-disable-progress",
+  "authors": [
+    "Ryan Sadwick <rsadwick@gmail.com>"
+  ],
+  "description": "Disable progress bar plugin for VideoJS",
+  "main": "src/videojs.disableProgress.js",
+  "keywords": [
+    "videojs",
+    "video",
+    "progress",
+    "disable"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "spec",
+    "Gruntfile.js",
+    "lib"
+  ],
+  "dependencies": {
+    "videojs": "~4.11"
+  }
+}
