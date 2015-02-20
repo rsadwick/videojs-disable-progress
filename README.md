@@ -7,8 +7,7 @@ Download [videojs](http://www.videojs.com/)
 
 In your web page:
 
-```html
-<script>
+```javascript
 var enabled = false;
 
 videojs("example_video_1").ready(function () {
@@ -22,24 +21,23 @@ videojs("example_video_1").ready(function () {
     }
 
 });
-</script>
 ```
 
 Want to auto disable the controls, use the autoDisable option:
 
-```html
+```javascript
 videojs("example_video_1").ready(function () {
   var player = this;
   player.disableProgress({
     autoDisable: true
   });
 });
-</script>
+
 ```
 
 Use the tiny api to enable/disable through js:
 
-```html
+```javascript
 videojs("example_video_1").ready(function () {
   var player = this;
   player.disableProgress();
@@ -50,9 +48,7 @@ videojs("example_video_1").ready(function () {
   //some awesome event happens when you need to enable:
   player.disableProgress.enable()
 });
-</script>
 ```
-
 
 ## Example
 
