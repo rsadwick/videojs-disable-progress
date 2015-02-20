@@ -8,18 +8,19 @@ Download [videojs](http://www.videojs.com/)
 In your web page:
 
 ```html
-<link rel="stylesheet" href="video-js.css">
-<video id="video"
-       class="video-js vjs-default-skin"
-       src="movie.mp4"
-       controls>
-</video>
-<script src="video.js"></script>
-<script src="dist/videojs.disableUi.min.js"></script>
 <script>
-videojs('video', {}, function() {
-  var player = this;
-  player.disableUi(); // initialize the plugin
+var enabled = false;
+
+videojs("example_video_1").ready(function () {
+    this.disableProgress();
+
+    if(enabled){
+       this.disableProgress.enable();
+    }
+    else{
+        this.disableProgress.disable();
+    }
+
 });
 </script>
 ```
@@ -27,9 +28,9 @@ videojs('video', {}, function() {
 Want to auto disable the controls, use the autoDisable option:
 
 ```html
-videojs('video', {}, function() {
+videojs("example_video_1").ready(function () {
   var player = this;
-  player.disableUi({
+  player.disableProgress({
     autoDisable: true
   });
 });
@@ -39,9 +40,9 @@ videojs('video', {}, function() {
 Use the tiny api to enable/disable through js:
 
 ```html
-videojs('video', {}, function() {
+videojs("example_video_1").ready(function () {
   var player = this;
-  player.disableUi();
+  player.disableProgress();
 
   //something changes where you need to disable:
   player.disableProgress.disable();
@@ -55,12 +56,7 @@ videojs('video', {}, function() {
 
 ## Example
 
-[jsfiddle example](http://jsfiddle.net/rsadwick/Qmeat/)
+[jsfiddle example](http://jsfiddle.net/rsadwick/1ghw7w4y/)
 
 ## Examples
 Check out example.html to see Disable Progress in action.
-
-## Release History
-#####12/30/2013
-* Added getState method that returns whether the progress is disabled or not
-* Added better tests
