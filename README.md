@@ -1,6 +1,6 @@
 # Disable Progress
 
-Disable Progress bar from being clicked on.  Useful for preroll videos where you need to disable the user from progressing/scrubbing the video.
+This videojs plugin allows you to disable video progress.  Useful for preroll videos where you need to disable the user from progressing/scrubbing the video.
 
 ## Getting Started
 Download [videojs](http://www.videojs.com/)
@@ -19,7 +19,6 @@ videojs("example_video_1").ready(function () {
     else{
         this.disableProgress.disable();
     }
-
 });
 ```
 
