@@ -50,9 +50,9 @@
         },
         enable: function() {
             state = false;
-            player.controlBar.progressControl.seekBar.on("mousedown",  player.controlBar.progressControl.seekBar.onMouseDown);
-            player.controlBar.progressControl.seekBar.on("touchstart", player.controlBar.progressControl.seekBar.onMouseDown);
-            player.controlBar.progressControl.seekBar.on("click", player.controlBar.progressControl.seekBar.onClick);
+            player.controlBar.progressControl.seekBar.on("mousedown",  player.controlBar.progressControl.seekBar.handleMouseDown);
+            player.controlBar.progressControl.seekBar.on("touchstart", player.controlBar.progressControl.seekBar.handleMouseDown);
+            player.controlBar.progressControl.seekBar.on("click", player.controlBar.progressControl.seekBar.handleClick);
         },
         getState: function(){
           return state;
