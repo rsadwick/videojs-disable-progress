@@ -45,13 +45,17 @@
         disable: function() {
             state = true;
             player.controlBar.progressControl.seekBar.off("mousedown");
+            player.controlBar.progressControl.seekBar.off("mouseup");
             player.controlBar.progressControl.seekBar.off("touchstart");
+            player.controlBar.progressControl.seekBar.off("touchend");
             player.controlBar.progressControl.seekBar.off("click");
         },
         enable: function() {
             state = false;
             player.controlBar.progressControl.seekBar.on("mousedown",  player.controlBar.progressControl.seekBar.handleMouseDown);
+            player.controlBar.progressControl.seekBar.on("mouseup",  player.controlBar.progressControl.seekBar.handleMouseUp);
             player.controlBar.progressControl.seekBar.on("touchstart", player.controlBar.progressControl.seekBar.handleMouseDown);
+            player.controlBar.progressControl.seekBar.on("touchend", player.controlBar.progressControl.seekBar.handleMouseUp);
             player.controlBar.progressControl.seekBar.on("click", player.controlBar.progressControl.seekBar.handleClick);
         },
         getState: function(){
