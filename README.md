@@ -51,7 +51,7 @@ videojs("example_video_1").ready(function () {
 
 ## Example
 
-[jsfiddle example](http://jsfiddle.net/rsadwick/1ghw7w4y/)
+[jsfiddle example](http://jsfiddle.net/1ghw7w4y/337/)
 
 ## Examples
 Check out example.html to see Disable Progress in action.
